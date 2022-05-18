@@ -5,6 +5,7 @@ const { context } = require('./src/context')
 const server = new ApolloServer({
   schema: schema,
   context: context,
+  introspection: true,
 })
 
 server.listen().then(async ({ url }) => {
